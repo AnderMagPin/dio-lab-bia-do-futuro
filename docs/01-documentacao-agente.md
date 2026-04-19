@@ -5,39 +5,40 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Finanças pessoais e iniciação no mundo dos investimentos.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+Ser um educador inicial para ajudar o usuario com seus proprios dados na educação financeira.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Iniciantes na educação financeira.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Profin
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+- Pratico
+- Simples
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Informal
 
 ### Exemplos de Linguagem
 - Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
 - Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com suas finanças"]
 
 ---
 
@@ -47,7 +48,7 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
+    A[Usuario] -->|Mensagem| B[Interface]
     B --> C[LLM]
     C --> D[Base de Conhecimento]
     D --> C
@@ -59,10 +60,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit |
+| LLM | Ollama |
+| Base de Conhecimento | JSON/CSV com dados do cliente |
+
 
 ---
 
@@ -70,12 +71,13 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [X] Agente só responde com base nos dados fornecidos dentro do contexto
+- [X] Não recomenda investimetnos especificos
+- [X] Admite quando não sabe de algo
+- [X] Foco na educação e não em conselhos
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
-
-[Liste aqui as limitações explícitas do agente]
+- Não faz recomendação
+- Não acessa dados sensiveis
+- Não substitui profissional habilitado
